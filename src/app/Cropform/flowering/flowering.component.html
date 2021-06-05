@@ -1,0 +1,75 @@
+<body>
+
+  <form #f="ngForm"  (ngSubmit)="onadd(f)" name="form" novalidate>
+    <div class="fbgcolor">
+      <br>
+
+      <div class="form-group">
+          <label for="flowering-id">flowering id</label>
+          <input type="text" class="form-control" [(ngModel)]="form.id" name="id" seedingSoil="ngModel" required> 
+        
+        </div>
+  
+
+      <div class="form-group">
+        <label for="flowering-soil">flowering soil</label>
+        <input type="text" class="form-control" [(ngModel)]="form.floweringsoil" name="floweringsoil" #floweringSoil="ngModel" required> 
+      
+      </div>
+
+      <div class="form-group" >
+          <label for="flowering-attack">flowering attack</label>
+          <input type="text" class="form-control" [(ngModel)]="form.floweringattack" name="floweringattack" #floweringAttack="ngModel" required> 
+        
+        </div>
+
+        <div class="form-group" >
+            <label for="flowering-landscape">flowering landscape</label>
+            <input type="text" class="form-control" [(ngModel)]="form.floweringlandscape" name="floweringlandscape" #floweringLandscape="ngModel" required> 
+        
+          </div>
+
+          <div class="form-group" >
+              <label for="flowering-watering">flowering watering</label>
+              <input type="text" class="form-control" [(ngModel)]="form.floweringwatering" name="floweringwatering" #floweringWatering="ngModel" required> 
+           
+            </div>
+
+            <div class="form-group" >
+                <label for="flowering-temp">flowering temp</label>
+                <input type="text" class="form-control" [(ngModel)]="form.floweringtemp" name="floweringtemp" #floweringTemp="ngModel" required> 
+             
+              </div>
+
+              <div class="form-group" >
+                  <label for="flowering-pestattacksymptoms">flowering pest attack symtoms</label>
+                  <input type="text" class="form-control" [(ngModel)]="form.floweringpestattacksymptoms" name="floweringpestattacksymptoms" #floweringPestAttackSymptoms="ngModel" required> 
+               
+                </div>
+
+                <div class="form-group">
+                    <label for="flowering-controlsystemchemical">flowering control system chemical</label>
+                    <input type="text" class="form-control" [(ngModel)]="form.floweringcontrolsystemchemical" name="floweringcontrolsystemchemical" #floweringControlSystemChemical="ngModel" required> 
+                  
+                  </div>
+
+                  <div class="form-group" >
+                      <label for="flowering-controlsystemnonchemical">flowering control non system chemical</label>
+                      <input type="text" class="form-control" [(ngModel)]="form.floweringcontrolsystemnonchemical" name="floweringcontrolsystemnonchemical" #floweringControlSystemNonChemical="ngModel" required> 
+                    
+                    </div>
+
+
+          
+
+      <button  class="btn btn-primary" [disabled]="f.invalid" >Add</button>
+      <div *ngIf="invalidsignup">
+        <div class="has-error">
+          {{message}}
+        </div>
+      </div>
+  </div>
+  </form>
+
+
+</body>

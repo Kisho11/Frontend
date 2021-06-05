@@ -1,0 +1,75 @@
+<body>
+
+  <form #f="ngForm"  (ngSubmit)="onadd(f)" name="form" novalidate>
+    <div class="fbgcolor">
+      <br>
+
+      <div class="form-group">
+          <label for="harvest-id">harvest id</label>
+          <input type="text" class="form-control" [(ngModel)]="form.id" name="id" seedingSoil="ngModel" required> 
+        
+        </div>
+  
+
+      <div class="form-group">
+        <label for="harvest-soil">harvest soil</label>
+        <input type="text" class="form-control" [(ngModel)]="form.harvestsoil" name="harvestsoil" #harvestSoil="ngModel" required> 
+      
+      </div>
+
+      <div class="form-group" >
+          <label for="harvest-attack">harvest attack</label>
+          <input type="text" class="form-control" [(ngModel)]="form.harvestattack" name="harvestattack" #harvestAttack="ngModel" required> 
+        
+        </div>
+
+        <div class="form-group" >
+            <label for="harvest-landscape">harvest landscape</label>
+            <input type="text" class="form-control" [(ngModel)]="form.harvestlandscape" name="harvestlandscape" #harvestLandscape="ngModel" required> 
+        
+          </div>
+
+          <div class="form-group" >
+              <label for="harvest-watering">harvest watering</label>
+              <input type="text" class="form-control" [(ngModel)]="form.harvestwatering" name="harvestwatering" #harvestWatering="ngModel" required> 
+           
+            </div>
+
+            <div class="form-group" >
+                <label for="harvest-temp">harvest temp</label>
+                <input type="text" class="form-control" [(ngModel)]="form.harvesttemp" name="harvesttemp" #harvestTemp="ngModel" required> 
+             
+              </div>
+
+              <div class="form-group" >
+                  <label for="harvest-pestattacksymptoms">harvest pest attack symtoms</label>
+                  <input type="text" class="form-control" [(ngModel)]="form.harvestpestattacksymptoms" name="harvestpestattacksymptoms" #harvestPestAttackSymptoms="ngModel" required> 
+               
+                </div>
+
+                <div class="form-group">
+                    <label for="harvest-controlsystemchemical">harvest control system chemical</label>
+                    <input type="text" class="form-control" [(ngModel)]="form.harvestcontrolsystemchemical" name="harvestcontrolsystemchemical" #harvestControlSystemChemical="ngModel" required> 
+                  
+                  </div>
+
+                  <div class="form-group" >
+                      <label for="harvest-controlsystemnonchemical">harvest control non system chemical</label>
+                      <input type="text" class="form-control" [(ngModel)]="form.harvestcontrolsystemnonchemical" name="harvestcontrolsystemnonchemical" #harvestControlSystemNonChemical="ngModel" required> 
+                    
+                    </div>
+
+
+          
+
+      <button  class="btn btn-primary" [disabled]="f.invalid" >Add</button>
+      <div *ngIf="invalidsignup">
+        <div class="has-error">
+          {{message}}
+        </div>
+      </div>
+  </div>
+  </form>
+
+
+</body>

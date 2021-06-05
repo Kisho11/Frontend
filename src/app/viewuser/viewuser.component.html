@@ -1,0 +1,12 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Angular 7!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let userview of userviews">
+        {{userview.id }} 
+        {{userview.name}} 
+        {{userview.username }} 
+        {{userview.email}}
+       <button (click)=delete(userview)>Delete</button>
+    </li>
+</ul>

@@ -1,0 +1,21 @@
+ body{
+  
+   background-image: url("../../assets/bg-01.JPG");
+   margin-left: -210px;
+   margin-top: -20px;
+   margin-right: -200px;
+   height: 750px;
+}
+
+.bg {
+  /* The image used */
+  /* background-image: url("../../assets/bg-01.JPG"); */
+
+  /* Full height */
+  height: 50%; width: 5000%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

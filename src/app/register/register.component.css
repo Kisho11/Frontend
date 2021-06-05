@@ -1,0 +1,20 @@
+   
+body{
+
+    background-image: url("../../assets/1212.jpg");
+   margin-left: -210px;
+   margin-top: -20px;
+   margin-right: -200px;
+   height: 750px;
+	
+}
+
+form{
+    margin-left: 200px;
+    width: 500px;
+    margin-top: 50px;
+}
+
+label{
+    color: aquamarine;
+}

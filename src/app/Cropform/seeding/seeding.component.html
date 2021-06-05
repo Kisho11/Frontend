@@ -1,0 +1,75 @@
+<body>
+
+    <form #f="ngForm"  (ngSubmit)="onadd(f)" name="form" novalidate>
+      <div class="fbgcolor">
+        <br>
+
+        <div class="form-group">
+            <label for="seeding-id">Seeding id</label>
+            <input type="text" class="form-control" [(ngModel)]="form.id" name="id" seedingSoil="ngModel" required> 
+          
+          </div>
+    
+  
+        <div class="form-group">
+          <label for="seeding-soil">Seeding soil</label>
+          <input type="text" class="form-control" [(ngModel)]="form.seedingsoil" name="seedingsoil" seedingSoil="ngModel" required> 
+        
+        </div>
+  
+        <div class="form-group" >
+            <label for="seeding-attack">Seeding attack</label>
+            <input type="text" class="form-control" [(ngModel)]="form.seedingattack" name="seedingattack" #seedingAttack="ngModel" required> 
+          
+          </div>
+  
+          <div class="form-group" >
+              <label for="seeding-landscape">Seeding landscape</label>
+              <input type="text" class="form-control" [(ngModel)]="form.seedinglandscape" name="seedinglandscape" #seedingLandscape="ngModel" required> 
+          
+            </div>
+  
+            <div class="form-group" >
+                <label for="seeding-watering">Seeding watering</label>
+                <input type="text" class="form-control" [(ngModel)]="form.seedingwatering" name="seedingwatering" #seedingWatering="ngModel" required> 
+             
+              </div>
+  
+              <div class="form-group" >
+                  <label for="seeding-temp">Seeding temp</label>
+                  <input type="text" class="form-control" [(ngModel)]="form.seedingtemp" name="seedingtemp" #seedingTemp="ngModel" required> 
+               
+                </div>
+  
+                <div class="form-group" >
+                    <label for="seeding-pestattacksymptoms">Seeding pest attack symtoms</label>
+                    <input type="text" class="form-control" [(ngModel)]="form.seedingpestattacksymptoms" name="seedingpestattacksymptoms" #seedingPestAttackSymptoms="ngModel" required> 
+                 
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="seeding-controlsystemchemical">Seeding control system chemical</label>
+                      <input type="text" class="form-control" [(ngModel)]="form.seedingcontrolsystemchemical" name="seedingcontrolsystemchemical" #seedingControlSystemChemical="ngModel" required> 
+                    
+                    </div>
+  
+                    <div class="form-group" >
+                        <label for="seeding-controlsystemnonchemical">Seeding control non system chemical</label>
+                        <input type="text" class="form-control" [(ngModel)]="form.seedingcontrolsystemnonchemical" name="seedingcontrolsystemnonchemical" #seedingControlSystemNonChemical="ngModel" required> 
+                      
+                      </div>
+  
+  
+            
+  
+        <button  class="btn btn-primary" [disabled]="f.invalid" >Add</button>
+        <div *ngIf="invalidsignup">
+          <div class="has-error">
+            {{message}}
+          </div>
+        </div>
+    </div>
+    </form>
+  
+  
+  </body>

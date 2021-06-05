@@ -1,0 +1,75 @@
+<body>
+
+  <form #f="ngForm"  (ngSubmit)="onadd(f)" name="form" novalidate>
+    <div class="fbgcolor">
+      <br>
+
+      <div class="form-group">
+          <label for="postharvest-id">postharvest id</label>
+          <input type="text" class="form-control" [(ngModel)]="form.id" name="id" seedingSoil="ngModel" required> 
+        
+        </div>
+  
+
+      <div class="form-group">
+        <label for="postharvest-soil">postharvest soil</label>
+        <input type="text" class="form-control" [(ngModel)]="form.postharvestsoil" name="postharvestsoil" #postharvestSoil="ngModel" required> 
+      
+      </div>
+
+      <div class="form-group" >
+          <label for="postharvest-attack">postharvest attack</label>
+          <input type="text" class="form-control" [(ngModel)]="form.postharvestattack" name="postharvestattack" #postharvestAttack="ngModel" required> 
+        
+        </div>
+
+        <div class="form-group" >
+            <label for="postharvest-landscape">postharvest landscape</label>
+            <input type="text" class="form-control" [(ngModel)]="form.postharvestlandscape" name="postharvestlandscape" #postharvestLandscape="ngModel" required> 
+        
+          </div>
+
+          <div class="form-group" >
+              <label for="postharvest-watering">postharvest watering</label>
+              <input type="text" class="form-control" [(ngModel)]="form.postharvestwatering" name="postharvestwatering" #postharvestWatering="ngModel" required> 
+           
+            </div>
+
+            <div class="form-group" >
+                <label for="postharvest-temp">postharvest temp</label>
+                <input type="text" class="form-control" [(ngModel)]="form.postharvesttemp" name="postharvesttemp" #postharvestTemp="ngModel" required> 
+             
+              </div>
+
+              <div class="form-group" >
+                  <label for="postharvest-pestattacksymptoms">postharvest pest attack symtoms</label>
+                  <input type="text" class="form-control" [(ngModel)]="form.postharvestpestattacksymptoms" name="postharvestpestattacksymptoms" #postharvestPestAttackSymptoms="ngModel" required> 
+               
+                </div>
+
+                <div class="form-group">
+                    <label for="postharvest-controlsystemchemical">postharvest control system chemical</label>
+                    <input type="text" class="form-control" [(ngModel)]="form.postharvestcontrolsystemchemical" name="postharvestcontrolsystemchemical" #postharvestControlSystemChemical="ngModel" required> 
+                  
+                  </div>
+
+                  <div class="form-group" >
+                      <label for="postharvest-controlsystemnonchemical">postharvest control non system chemical</label>
+                      <input type="text" class="form-control" [(ngModel)]="form.postharvestcontrolsystemnonchemical" name="postharvestcontrolsystemnonchemical" #postharvestControlSystemNonChemical="ngModel" required> 
+                    
+                    </div>
+
+
+          
+
+      <button  class="btn btn-primary" [disabled]="f.invalid" >Add</button>
+      <div *ngIf="invalidsignup">
+        <div class="has-error">
+          {{message}}
+        </div>
+      </div>
+  </div>
+  </form>
+
+
+</body>

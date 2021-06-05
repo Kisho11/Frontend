@@ -1,0 +1,75 @@
+<body>
+
+        <form #f="ngForm"  (ngSubmit)="onadd(f)" name="form" novalidate>
+          <div class="fbgcolor">
+            <br>
+    
+            <div class="form-group">
+                <label for="adult-id">Adult id</label>
+                <input type="text" class="form-control" [(ngModel)]="form.id" name="id" seedingSoil="ngModel" required> 
+              
+              </div>
+        
+      
+            <div class="form-group">
+              <label for="adult-soil">Adult soil</label>
+              <input type="text" class="form-control" [(ngModel)]="form.adultsoil" name="adultsoil" #adultSoil="ngModel" required> 
+            
+            </div>
+      
+            <div class="form-group" >
+                <label for="adult-attack">Adult attack</label>
+                <input type="text" class="form-control" [(ngModel)]="form.adultattack" name="adultattack" #adultAttack="ngModel" required> 
+              
+              </div>
+      
+              <div class="form-group" >
+                  <label for="adult-landscape">Adult landscape</label>
+                  <input type="text" class="form-control" [(ngModel)]="form.adultlandscape" name="adultlandscape" #adultLandscape="ngModel" required> 
+              
+                </div>
+      
+                <div class="form-group" >
+                    <label for="adult-watering">Adult watering</label>
+                    <input type="text" class="form-control" [(ngModel)]="form.adultwatering" name="adultwatering" #adultWatering="ngModel" required> 
+                 
+                  </div>
+      
+                  <div class="form-group" >
+                      <label for="adult-temp">Adult temp</label>
+                      <input type="text" class="form-control" [(ngModel)]="form.adulttemp" name="adulttemp" #adultTemp="ngModel" required> 
+                   
+                    </div>
+      
+                    <div class="form-group" >
+                        <label for="adult-pestattacksymptoms">Adult pest attack symtoms</label>
+                        <input type="text" class="form-control" [(ngModel)]="form.adultpestattacksymptoms" name="adultpestattacksymptoms" #adultPestAttackSymptoms="ngModel" required> 
+                     
+                      </div>
+      
+                      <div class="form-group">
+                          <label for="adult-controlsystemchemical">Adult control system chemical</label>
+                          <input type="text" class="form-control" [(ngModel)]="form.adultcontrolsystemchemical" name="adultcontrolsystemchemical" #adultControlSystemChemical="ngModel" required> 
+                        
+                        </div>
+      
+                        <div class="form-group" >
+                            <label for="adult-controlsystemnonchemical">Adult control non system chemical</label>
+                            <input type="text" class="form-control" [(ngModel)]="form.adultcontrolsystemnonchemical" name="adultcontrolsystemnonchemical" #adultControlSystemNonChemical="ngModel" required> 
+                          
+                          </div>
+      
+      
+                
+      
+            <button  class="btn btn-primary" [disabled]="f.invalid" >Add</button>
+            <div *ngIf="invalidsignup">
+              <div class="has-error">
+                {{message}}
+              </div>
+            </div>
+        </div>
+        </form>
+      
+      
+      </body>
